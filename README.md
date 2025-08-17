@@ -30,15 +30,17 @@ pip install yt-dlp spotipy
 ```
 # Usage
 
-## 1. Clone The Repository
+### 1. Clone The Repository
+```bash
 git clone https://github.com/yourusername/spotify-yt-playlist.git
 cd spotify-yt-playlist
-
-## 2. Run The Script
+```
+### 2. Run The Script
+```bash
 python main.py
-
-## 3. Enter a Spotify playlist URL when prompted
-## 4. Wait while tracks are downloaded and merged. The final merged MP3 playlist will be saved in the Downloads folder as MyPLaylist.mp3
+```
+### 3. Enter a Spotify playlist URL when prompted
+### 4. Wait while tracks are downloaded and merged. The final merged MP3 playlist will be saved in the Downloads folder as MyPLaylist.mp3
 
 # File Structure
 
