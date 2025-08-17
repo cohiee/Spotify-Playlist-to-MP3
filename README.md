@@ -30,18 +30,18 @@ pip install yt-dlp spotipy
 ```
 # Usage
 
-### 1. Clone The Repository
+1. Clone The Repository
 ```bash
 git clone https://github.com/yourusername/spotify-yt-playlist.git
 cd spotify-yt-playlist
 ```
-### 2. Run The Script
+2. Run The Script
 ```bash
 python main.py
 ```
-### 3. Enter a Spotify playlist URL when prompted
+3. Enter a Spotify playlist URL when prompted
 
-### 4. Wait while tracks are downloaded and merged. The final merged MP3 playlist will be saved in the Downloads folder as MyPLaylist.mp3
+4. Wait while tracks are downloaded and merged. The final merged MP3 playlist will be saved in the Downloads folder as MyPLaylist.mp3
 
 # File Structure
 ```bash
@@ -51,8 +51,8 @@ spotify-yt-playlist/
 ├─ README.md        # Project documentation
 ├─ Downloads/       # Folder for downloaded tracks and merged playlist
 ```
-# How It Works
 
+# How It Works
 1. Uses Spotipy to retrieve track names and artist information from a Spotify playlist.
 2. Searches YouTube for the best matching video for each track.
 3. Downloads audio and converts it to MP3 using ffmpeg.
