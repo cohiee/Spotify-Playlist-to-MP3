@@ -40,16 +40,17 @@ cd spotify-yt-playlist
 python main.py
 ```
 ### 3. Enter a Spotify playlist URL when prompted
+
 ### 4. Wait while tracks are downloaded and merged. The final merged MP3 playlist will be saved in the Downloads folder as MyPLaylist.mp3
 
 # File Structure
-
+```bash
 spotify-yt-playlist/
 │
 ├─ main.py          # Main script
 ├─ README.md        # Project documentation
 ├─ Downloads/       # Folder for downloaded tracks and merged playlist
-
+```
 # How It Works
 
 1. Uses Spotipy to retrieve track names and artist information from a Spotify playlist.
