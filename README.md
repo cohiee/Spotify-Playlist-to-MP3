@@ -27,7 +27,7 @@ Install Python dependencies:
 
 ```bash
 pip install yt-dlp spotipy
-
+```
 # Usage
 
 ## 1. Clone The Repository
