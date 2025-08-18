@@ -1,30 +1,32 @@
 from flask import Flask, request, render_template, send_file
 from main import get_playlist_songs, download_yt_as_mp3, merge_files, search_yt
 import os
+import shutil
 
 app = Flask(__name__)
 DOWNLOAD_FOLDER = "Downloads"
 
-@app.route("/") # when user go to homepage run this
+@app.route("/")
 def index():
     return render_template("index.html")
 
-@app.route("/download", methods=["POST"]) #when form submitted send POST req to downloads
+@app.route("/download", methods=["POST"])
 def download():
-    playlist_url = request.form["playlist_url"] # gets the URL entered by user in HTML
+    playlist_url = request.form["playlist_url"]
     tracks = get_playlist_songs(playlist_url)
     downloaded_files = []
 
-    if not os.path.exists(DOWNLOAD_FOLDER):
-        os.makedirs(DOWNLOAD_FOLDER)
+    # Purge folder
+    if os.path.exists(DOWNLOAD_FOLDER):
+        shutil.rmtree(DOWNLOAD_FOLDER)
+    os.makedirs(DOWNLOAD_FOLDER)
 
     for title, artists in tracks:
         query = f"{title} {' '.join(artists)}"
-
         yt_url = search_yt(query)
 
         if yt_url:
-            mp3_file = download_yt_as_mp3(yt_url, output_folder=DOWNLOAD_FOLDER)
+            mp3_file = download_yt_as_mp3(yt_url)
             if mp3_file:
                 downloaded_files.append(mp3_file)
         else:
@@ -36,6 +38,7 @@ def download():
         return send_file(final_file, as_attachment=True)
     else:
         return "No Tracks Downloaded"
-    
+
+
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port = 5000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
