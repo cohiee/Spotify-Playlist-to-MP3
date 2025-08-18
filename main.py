@@ -67,8 +67,6 @@ def get_unique_filename(base_path): # makes the files have a unique name if it i
         new_path = f"{base}({i}){ext}"
     return new_path
 
-import re
-
 def sanitize_filename(name):
     name = re.sub(r'[<>:"/\\|?*]', '_', name)
     name = name.replace(' ', '_')
@@ -127,7 +125,7 @@ def download_yt_as_mp3(url, output_folder="Downloads"):
             return mp3_file
 
     except Exception as e:
-        print(f"❌Error: {e}")
+        print(f"❌ Error: {e}")
         return None
 
 # if __name__ == "__main__":
@@ -168,29 +166,29 @@ def merge_files(file_list, output_file):
     ], check=True)
     os.remove(temp_txt)
 
-if __name__ == "__main__":
-    playlist_url = input("Enter Spotify playlist URL: ")
-    tracks = get_playlist_songs(playlist_url)
+# if __name__ == "__main__":
+#     playlist_url = input("Enter Spotify playlist URL: ")
+#     tracks = get_playlist_songs(playlist_url)
 
-    if not os.path.exists(DOWNLOAD_FOLDER):
-        os.makedirs(DOWNLOAD_FOLDER)
+#     if not os.path.exists(DOWNLOAD_FOLDER):
+#         os.makedirs(DOWNLOAD_FOLDER)
     
-    downloaded_files = []
+#     downloaded_files = []
 
-    for title, artists in tracks:
-        query = f"{title} {' '.join(artists)}"
-        print(f"🔍 Searching YouTube for: {query}")
-        yt_url = search_yt(query)
-        if yt_url:
-            mp3_file = download_yt_as_mp3(yt_url, output_folder = DOWNLOAD_FOLDER)
-            if mp3_file:
-                downloaded_files.append(mp3_file)
-        else:
-            print(f"❌ Could not find YouTube video for: {title}")
+#     for title, artists in tracks:
+#         query = f"{title} {' '.join(artists)}"
+#         print(f"🔍 Searching YouTube for: {query}")
+#         yt_url = search_yt(query)
+#         if yt_url:
+#             mp3_file = download_yt_as_mp3(yt_url, output_folder = DOWNLOAD_FOLDER)
+#             if mp3_file:
+#                 downloaded_files.append(mp3_file)
+#         else:
+#             print(f"❌ Could not find YouTube video for: {title}")
     
-    if downloaded_files:
-        final_merged = os.path.join(DOWNLOAD_FOLDER, "MyPlaylist.mp3")
-        merge_files(downloaded_files, final_merged)
-        print(f"\n Playlist merged into: {final_merged}")
-    else: 
-        print("No tracks were downloaded")
+#     if downloaded_files:
+#         final_merged = os.path.join(DOWNLOAD_FOLDER, "MyPlaylist.mp3")
+#         merge_files(downloaded_files, final_merged)
+#         print(f"\n Playlist merged into: {final_merged}")
+#     else: 
+#         print("No tracks were downloaded")
