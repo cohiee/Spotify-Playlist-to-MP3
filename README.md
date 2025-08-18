@@ -1,4 +1,3 @@
-# fluffy-bassoon
 # Spotify-to-YouTube Playlist Downloader & Merger
 
 A Python tool to download tracks from a Spotify playlist via YouTube, convert them to MP3, and merge them into a single audio file. Ideal for offline listening and creating custom playlists.
