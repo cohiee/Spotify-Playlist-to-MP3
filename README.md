@@ -159,7 +159,7 @@ spotify-mp3-downloader/
 ```
 
 ## 🔧 Configuration
-###Environment Variables (Optional)
+### Environment Variables (Optional)
 
 You can use environment variables instead of hardcoded credentials:
 ```
