@@ -44,11 +44,15 @@ python main.py
 
 # File Structure
 ```bash
-spotify-yt-playlist/
-│
-├─ main.py          # Main script
-├─ README.md        # Project documentation
-├─ Downloads/       # Folder for downloaded tracks and merged playlist
+spotify_mp3_downloader/
+├─ Downloads/
+├─ static/
+│  └─ style.css # CSS for slight styling of the website
+├─ templates/
+│  └─ index.html # HTML template for the website
+├─ app.py # Flask backend handling for the website
+├─ main.py # Main code to download from playlist to mp3
+└─ __pycache__/
 ```
 
 # How It Works
