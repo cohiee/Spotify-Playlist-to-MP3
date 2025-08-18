@@ -112,7 +112,7 @@ ngrok http 5000
 ### 2. Access the Interface
 Open your browser and go to: http://localhost:5000
 
-###3. For External Access (Optional)
+### 3. For External Access (Optional)
 ```
 Install ngrok
 ```
@@ -122,7 +122,7 @@ ngrok http 5000
 ```
 Use the provided HTTPS URL
 
-##📝 Usage
+## 📝 Usage
 ## Using the Web Interface
 
 1. Open the web interface
