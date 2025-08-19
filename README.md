@@ -50,7 +50,7 @@ sudo apt install ffmpeg
 1. Go to Spotify Developer Dashboard
 2. Create a new app
 3. Note down your Client ID and Client Secret
-4. Update the credentials in main.py:
+4. Update the credentials in config.py:
 ```bash
 CLIENT_ID = "your_client_id_here"
 CLIENT_SECRET = "your_client_secret_here"
