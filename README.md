@@ -139,7 +139,7 @@ spotify:playlist:PLAYLIST_ID
 ### Command Line Usage
 You can also run the downloader directly:
 ```
-python main.py
+python spotify_downloader.py
 ```
 Enter a playlist URL when prompted.
 
@@ -166,7 +166,7 @@ You can use environment variables instead of hardcoded credentials:
 export SPOTIFY_CLIENT_ID="your_client_id"
 export SPOTIFY_CLIENT_SECRET="your_client_secret"
 ```
-Then update main.py:
+Then update spotify_downloader.py:
 ```
 import os
 CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID", "fallback_id")
@@ -174,9 +174,8 @@ CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET", "fallback_secret")
 ```
 ### Download Settings
 
-In main.py, you can modify:
+In spotify_downloader.py, you can modify:
 
-- DOWNLOAD_FOLDER: Change download location
 - Audio quality settings in download_yt_as_mp3()
 - Search parameters in search_yt()
 
