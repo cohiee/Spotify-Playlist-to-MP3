@@ -88,7 +88,7 @@ mkdir templates
 Move the index.html file to the templates/ directory.
 
 ### 5. Update Spotify Credentials
-Edit main.py and replace the placeholder credentials:
+Edit config.py and replace the placeholder credentials:
 ```bash
 CLIENT_ID = "your_actual_client_id"
 CLIENT_SECRET = "your_actual_client_secret"
