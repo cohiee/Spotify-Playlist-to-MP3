@@ -2,6 +2,9 @@
 
 A robust Flask application that downloads Spotify playlists as MP3 files using YouTube as the source.
 
+## DISCLAIMER
+
+The code, when used with ngrok in its website form, may not be able to support big playlists, as ngrok has limited bandwidth support. However, if you are simply using the spotify_downloader.py, it will support large files.
 ---
 
 ## ⚠️ Legal Notice
